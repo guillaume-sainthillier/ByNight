@@ -634,4 +634,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, Seriali
 
         return $this;
     }
+
+    public function setSalt(?string $salt): self
+    {
+        $this->salt = $salt;
+
+        return $this;
+    }
+
+    public function getIsVerified(): ?bool
+    {
+        return $this->isVerified;
+    }
 }
